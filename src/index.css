@@ -402,6 +402,79 @@ body {
   }
 }
 
+/* 704px */
+@media (max-width: 44em) {
+  body {
+    padding: 0;
+  }
+
+  .nav-bar {
+    height: 14rem;
+    padding: 0 1.6rem;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    border-radius: 0;
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .search {
+    order: 3;
+    width: 100%;
+  }
+
+  .main {
+    margin-top: 15.6rem;
+    margin-bottom: 1.6rem;
+    max-height: calc(100vh - 15.6rem - 1.6rem);
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.6rem;
+    overflow-y: hidden;
+  }
+
+  .filter {
+    margin-bottom: 0;
+  }
+
+  .filter-btn {
+    padding: 1.5rem 3rem;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+  }
+
+  .list {
+    padding: 0;
+  }
+
+  .list li {
+    padding: 1.6rem;
+  }
+
+  .box-header {
+    padding: 2.2rem 1.6rem 1.8rem;
+    border-radius: 0;
+  }
+
+  .list div, .box-header div {
+    flex-wrap: wrap;
+    gap: 1.6rem;
+  }
+
+  .btn {
+    font-size: 2.4rem;
+    height: 3.2rem;
+  }
+}
+
 .box::-webkit-scrollbar, .list::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
