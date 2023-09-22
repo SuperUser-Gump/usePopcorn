@@ -83,6 +83,7 @@ export default function App() {
       <main className="main">
         <div className="box">
           <button
+            className="btn btn-toggle"
             onClick={() => setIsOpen1((open) => !open)}
           >
             {isOpen1 ? "–" : "+"}
@@ -111,6 +112,7 @@ export default function App() {
 
         <div className="box">
           <button
+            className="btn btn-toggle"
             onClick={() => setIsOpen2((open) => !open)}
           >
             {isOpen2 ? "–" : "+"}
