@@ -371,6 +371,21 @@ body {
   justify-content: center;
 }
 
+.filter {
+  margin-bottom: 1.2rem;
+}
+
+.filter-btn {
+  background-color: var(--color-background-900);
+  color: var(--color-text);
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.7rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
 .box::-webkit-scrollbar, .list::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
