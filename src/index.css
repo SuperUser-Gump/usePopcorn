@@ -395,6 +395,13 @@ body {
   }
 }
 
+/* 944px */
+@media (max-width: 59em) {
+  html{
+    font-size: 50%;
+  }
+}
+
 .box::-webkit-scrollbar, .list::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
