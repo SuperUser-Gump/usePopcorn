@@ -89,6 +89,12 @@ export default function App() {
             {isOpen1 ? "–" : "+"}
           </button>
           <div className="box-header">
+            <div className="filter">
+              <button className="filter-btn">All</button>
+              <button className="filter-btn">Movie</button>
+              <button className="filter-btn">Series</button>
+              <button className="filter-btn">Episode</button>
+            </div>
           </div>
           {isOpen1 && (
             <div className="box-content">
