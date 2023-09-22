@@ -386,6 +386,15 @@ body {
   cursor: pointer;
 }
 
+/* ******* */
+
+/* 1032 px */
+@media (max-width: 64.5em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
 .box::-webkit-scrollbar, .list::-webkit-scrollbar {
   display: none;
   scroll-behavior: smooth;
