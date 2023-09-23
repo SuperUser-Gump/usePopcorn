@@ -140,6 +140,17 @@ function Box({ children }) {
   );
 }
 
+function Filter() {
+  return (
+    <div className="filter">
+      <button className="filter-btn">All</button>
+      <button className="filter-btn">Movie</button>
+      <button className="filter-btn">Series</button>
+      <button className="filter-btn">Episode</button>
+    </div>
+  );
+}
+
 function MovieList({ movies }) {
   return (
     <div className="box-content">
