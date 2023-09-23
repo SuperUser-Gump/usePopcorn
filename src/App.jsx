@@ -61,19 +61,11 @@ export default function App() {
         <NumResult movies={movies} />
       </NavBar>
       <Main>
-        <Box>
-          <div className="box-header">
-            <div className="filter">
-              <button className="filter-btn">All</button>
-              <button className="filter-btn">Movie</button>
-              <button className="filter-btn">Series</button>
-              <button className="filter-btn">Episode</button>
-            </div>
-          </div>
+        <Box header={<Filter />}>
           <MovieList movies={movies} />
         </Box>
-        <Box>
-          <WatchedSummary watched={watched} />
+        <Box header={<WatchedSummary watched={watched} />}>
+          <WatchedMoviesList watched={watched} />
         </Box>
       </Main>
     </>
@@ -124,7 +116,7 @@ function Main({ children }) {
   return <main className="main">{children}</main>;
 }
 
-function Box({ children }) {
+function Box({ header, children }) {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -135,6 +127,7 @@ function Box({ children }) {
       >
         {isOpen ? "–" : "+"}
       </button>
+      <div className="box-header">{header}</div>
       {isOpen && children}
     </div>
   );
@@ -184,7 +177,7 @@ function WatchedSummary({ watched }) {
   const avgRuntime = average(watched.map((movie) => movie.runtime));
 
   return (
-    <div className="box-header">
+    <>
       <h2>Movies you watched</h2>
       <div>
         <p>
@@ -204,7 +197,7 @@ function WatchedSummary({ watched }) {
           <span>{avgRuntime} min</span>
         </p>
       </div>
-    </div>
+    </>
   );
 }
 
