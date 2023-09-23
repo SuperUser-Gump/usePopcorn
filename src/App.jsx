@@ -60,7 +60,9 @@ export default function App() {
         <NumResult movies={movies} />
       </NavBar>
       <Main>
-        <ListBox movies={movies} />
+        <ListBox>
+          <MovieList movies={movies} />
+        </ListBox>
         <WatchedBox />
       </Main>
     </>
@@ -111,7 +113,7 @@ function Main({ children }) {
   return <main className="main">{children}</main>;
 }
 
-function ListBox({ movies }) {
+function ListBox({ children }) {
   const [isOpen1, setIsOpen1] = useState(true);
 
   return (
@@ -130,7 +132,7 @@ function ListBox({ movies }) {
           <button className="filter-btn">Episode</button>
         </div>
       </div>
-      {isOpen1 && <MovieList movies={movies} />}
+      {isOpen1 && children}
     </div>
   );
 }
