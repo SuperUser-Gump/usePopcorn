@@ -6,7 +6,7 @@ import StarRatings from "./StarRatings.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <StarRatings />
+    <StarRatings maxRating={5} />
     {/*<App />*/}
   </React.StrictMode>
 );
