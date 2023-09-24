@@ -304,6 +304,7 @@ body {
   color: var(--color-background-900);
   font-size: 0.9rem;
   transition: all 0.3s;
+
   margin-left: auto;
 }
 
