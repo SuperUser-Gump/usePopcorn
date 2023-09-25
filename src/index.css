@@ -423,6 +423,25 @@ body {
     font-size: 2.4rem;
     height: 3.2rem;
   }
+
+  .details-overview {
+    padding: 1.6rem 2.2rem;
+  }
+
+  .details section {
+    padding: 1.6rem;
+  }
+
+  .rating {
+    gap: 1.6rem;
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 0;
+  }
+
+  .btn-add {
+    height: 100%;
+  }
+
 }
 
 .box::-webkit-scrollbar, .list::-webkit-scrollbar {
