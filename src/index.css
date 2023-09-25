@@ -95,7 +95,7 @@ body {
   padding: 1.1rem 1.6rem;
   font-size: 1.8rem;
   border-radius: 0.7rem;
-  width: 40rem;
+  width: 70%;
   transition: all 0.3s;
   color: var(--color-text);
   background-color: var(--color-primary-light);
@@ -113,6 +113,7 @@ body {
 
 .num-results {
   font-size: 1.8rem;
+  margin-bottom: 2.2rem;
 }
 
 .list {
@@ -335,28 +336,12 @@ body {
   aspect-ratio: 1;
   background-color: #fff;
   color: var(--color-background-500);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
   font-family: sans-serif;
   font-size: 1.6rem;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.filter {
-  margin-bottom: 1.2rem;
-}
-
-.filter-btn {
-  background-color: var(--color-background-900);
-  color: var(--color-text);
-  border: none;
-  padding: 0.9rem 1.8rem;
-  border-radius: 0.7rem;
-  font-weight: bold;
-  font-size: 1.6rem;
-  cursor: pointer;
 }
 
 /* ******* */
@@ -392,7 +377,7 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 99999;
   }
 
   .search {
@@ -403,19 +388,12 @@ body {
   .main {
     margin-top: 15.6rem;
     margin-bottom: 1.6rem;
-    max-height: calc(100vh - 15.6rem - 1.6rem);
+    max-height: 100%;
+    height: 100%;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1.6rem;
     overflow-y: hidden;
-  }
-
-  .filter {
-    margin-bottom: 0;
-  }
-
-  .filter-btn {
-    padding: 1.5rem 3rem;
   }
 
   .box {
@@ -446,6 +424,25 @@ body {
     font-size: 2.4rem;
     height: 3.2rem;
   }
+
+  .details-overview {
+    padding: 1.6rem 2.2rem;
+  }
+
+  .details section {
+    padding: 1.6rem;
+  }
+
+  .rating {
+    gap: 1.6rem;
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 0;
+  }
+
+  .btn-add {
+    height: 100%;
+  }
+
 }
 
 .box::-webkit-scrollbar, .list::-webkit-scrollbar {
