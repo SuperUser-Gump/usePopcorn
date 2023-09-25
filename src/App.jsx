@@ -301,6 +301,23 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     Genre: genre,
   } = movie;
 
+  useEffect(
+    function () {
+      function callback(e) {
+        if (e.key === "Escape") {
+          onCloseMovie();
+        }
+      }
+
+      document.addEventListener("keydown", callback);
+
+      return function () {
+        document.removeEventListener("keydown", callback);
+      };
+    },
+    [onCloseMovie]
+  );
+
   function handleAdd() {
     const newWatchMovie = {
       imdbID: selectedId,
