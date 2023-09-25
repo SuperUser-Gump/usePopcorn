@@ -330,7 +330,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
                 <>
                   <StarRatings
                     maxRating={10}
-                    size={24}
+                    size={2.4}
                     onSetRating={setUserRating}
                   />
                   {userRating > 0 && (

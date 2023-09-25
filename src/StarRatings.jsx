@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const containerStyle = {
   display: "flex",
   alignItems: "center",
-  gap: "16px",
+  gap: "1.6rem",
 };
 
 const starContainerStyle = {
@@ -42,7 +42,7 @@ function StarRatings({
     lineHeight: "1",
     margin: "0",
     color,
-    fontSize: `${size / 1.5}px`,
+    fontSize: `${size / 1.5}rem`,
   };
 
   return (
@@ -73,8 +73,8 @@ export default StarRatings;
 
 function Star({ onRate, full, onHoverIn, onHoverOut, size, color }) {
   const starStyle = {
-    width: `${size}px`,
-    height: `${size}px`,
+    width: `${size}rem`,
+    height: `${size}rem`,
     display: "block",
     cursor: "pointer",
   };
