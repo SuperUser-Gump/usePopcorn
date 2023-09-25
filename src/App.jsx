@@ -80,10 +80,9 @@ export default function App() {
     <>
       <NavBar>
         <Search query={query} setQuery={setQuery} />
-        <NumResult movies={movies} />
       </NavBar>
       <Main>
-        <Box header={<Filter />}>
+        <Box header={<NumResult movies={movies} />}>
           {isLoading && <Loader />}
           {!isLoading && !error && (
             <MovieList movies={movies} onSelectMovie={handleSelectMovie} />
@@ -186,17 +185,6 @@ function Box({ header, children }) {
       </button>
       <div className="box-header">{header}</div>
       {isOpen && children}
-    </div>
-  );
-}
-
-function Filter() {
-  return (
-    <div className="filter">
-      <button className="filter-btn">All</button>
-      <button className="filter-btn">Movie</button>
-      <button className="filter-btn">Series</button>
-      <button className="filter-btn">Episode</button>
     </div>
   );
 }
@@ -342,7 +330,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
                 <>
                   <StarRatings
                     maxRating={10}
-                    size={24}
+                    size={2.4}
                     onSetRating={setUserRating}
                   />
                   {userRating > 0 && (
