@@ -1,13 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useKey } from "../hooks/useKey.js";
-import StarRatings from "./StarRatings.jsx";
-import Loader from "./Loader.jsx";
-import { useMovieDetails } from "../hooks/useMovieDetails.js";
-
-const KEY = import.meta.env.VITE_KEY;
+import React, { useEffect, useRef, useState } from 'react';
+import { useKey } from '../hooks/useKey.js';
+import StarRatings from './StarRatings.jsx';
+import Loader from './Loader.jsx';
+import { useMovieId } from '../hooks/useMovieId.js';
 
 function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
-  const [userRating, setUserRating] = useState("");
+  const [userRating, setUserRating] = useState('');
 
   const countRef = useRef(0);
 
@@ -23,7 +21,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     (movie) => movie.imdbID === selectedId
   )?.userRating;
 
-  const { movie, isLoading } = useMovieDetails(selectedId);
+  const { movie, isLoading } = useMovieId(selectedId);
 
   const {
     Title: title,
@@ -45,7 +43,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       year,
       poster,
       imdbRating: Number(imdbRating) || 0,
-      runtime: Number(runtime.split(" ").at(0)) || 0,
+      runtime: Number(runtime.split(' ').at(0)) || 0,
       userRating,
       countRatingDecisions: countRef.current,
     };
@@ -53,7 +51,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     onCloseMovie();
   }
 
-  useKey("Escape", onCloseMovie);
+  useKey('Escape', onCloseMovie);
 
   useEffect(
     function () {
@@ -61,7 +59,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       document.title = `Movie | ${title}`;
 
       return function () {
-        document.title = "usePopcorn";
+        document.title = 'usePopcorn';
       };
     },
     [title]
