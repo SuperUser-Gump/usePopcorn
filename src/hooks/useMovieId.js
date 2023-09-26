@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const KEY = import.meta.env.VITE_KEY;
 
@@ -11,7 +11,7 @@ export function useMovieId(id) {
       async function getMovieDetails() {
         setIsLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=${KEY}&i=${id}`
+          `https://www.omdbapi.com/?apikey=${KEY}&i=${id}`
         );
         const data = await res.json();
         setMovie(data);
