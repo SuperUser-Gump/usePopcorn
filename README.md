@@ -80,7 +80,7 @@ The development server will be running on http://localhost:5173. You can open th
 
 ## Usage
 
-To use usePopcorn, simply navigate to the website and start searching for movies. You can search by title, genre, or any other keyword.
+To use usePopcorn, simply navigate to the website and start searching for movies. You can search by title.
 
 Once you find a movie that you are interested in, click on it to view the details page. The details page will show you the movie title, poster, runtime, IMDb rating, plot, release year, actors, director, and genre. You can also rate the movie and add it to your watchlist.
 
